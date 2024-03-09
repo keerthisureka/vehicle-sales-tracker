@@ -4,8 +4,9 @@ const Schema = mongoose.Schema;
 
 const carsModel = new Schema({
     type: {type: String, default: "Car"},
-    mod: {type: String, default: "Suzuki"},
-    units: {type: String, default: "1"},
+    brand: {type: String, default: "Hyundai"},
+    mod: {type: String, default: "Verna"},
+    units: {type: Number, default: "1"},
     year: {type: String, default: "2023"}
 })
 
