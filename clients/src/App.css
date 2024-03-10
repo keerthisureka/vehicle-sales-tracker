@@ -270,12 +270,12 @@
 }
 
 .welcome {
-  font-size: 5.0rem; /* Adjust the font size as needed */
+  font-size: 4.0rem; /* Adjust the font size as needed */
   font-weight: bold; /* Make the text bold */
   color: #333; /* Change the color if necessary */
   text-align: center; /* Center align the text */
   margin-bottom: 2rem; /* Add some space below the message */
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Poppins', sans-serif;
   animation: fadeInUp 1s ease forwards;
 }
 
