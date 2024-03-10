@@ -63,7 +63,6 @@ function App() {
               <li onClick={() => scrollToSection('scooters')}>Scooters</li>
               <li onClick={() => scrollToSection('trucks')}>Trucks</li>
               <li onClick={() => scrollToSection('add-sale')}>Add New Sale</li>
-              <li onClick={() => scrollToSection('help')}>Help</li>
             </ul>
           </nav>
         </div>
@@ -131,11 +130,7 @@ function App() {
         </section>
         <section id="add-sale" className="section"><br /><br /><hr class="bold" />
           <p><NewSale /></p>
-        </section>
-        <section id="help" className="section"><br /><br /><hr class="bold" />
-          <h1 className="mb-10 mt-10 font-bold text-xl"><center>Help</center></h1>
-          <p>This is the content for the Help section.</p>
-        </section><br /><br />
+        </section><br /><br /><br /><br />
         <footer className="footer">
           <p>Vehicle sales Tracker</p>
           <div className="social-icons">
