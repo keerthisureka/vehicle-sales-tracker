@@ -17,6 +17,7 @@ import NewSale from './components/NewSale';
 import Login from './components/Login';
 import Register from './components/Register';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import SignOut from "./components/SignOut";
 
 function App() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -32,7 +33,7 @@ function App() {
         section.scrollIntoView({ behavior: 'smooth' });
       }
     };
-  
+
     return (
       <div>
         <Router>
@@ -50,8 +51,7 @@ function App() {
           <div className="header__content">
             <h1>Track Sales</h1>
             <div className="user-details">
-              <span className="username">User Name</span>
-              <button className="sign-out">Sign Out</button>
+              <SignOut />
             </div>
           </div>
         </header>
