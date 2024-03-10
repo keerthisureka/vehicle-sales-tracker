@@ -1,7 +1,8 @@
 import './App.css';
 
 import Graph from './components/Graph';
-import Form from './components/Form';
+import Graph2 from './components/Graph2';
+// import Form from './components/Form';
 import NewSale from './components/NewSale';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -18,7 +19,7 @@ function App() {
                 {/* Chart */}
                 <Graph />
                 {/* Form */}
-                <Form />
+                <Graph2 />
               </div>
             } />
             {/* Route for the page with NewSale component */}

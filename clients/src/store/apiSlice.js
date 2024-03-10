@@ -20,7 +20,49 @@ export const apiSlice = createApi({
                 body: initialCar
             }),
             invalidatesTags: ['cars']
-        })
+        }),
+        getBikes : builder.query({
+            // get: 'http://localhost:8080/api/bikes'
+            query: () => '/api/bikes',
+            providesTags: ['bikes']
+        }),
+        addBikes : builder.mutation({
+            query : (initialBike) => ({
+                // post: 'http://localhost:8080/api/bikes'
+                url: '/api/bikes',
+                method: "POST",
+                body: initialBike
+            }),
+            invalidatesTags: ['bikes']
+        }),
+        getScooters : builder.query({
+            // get: 'http://localhost:8080/api/scooters'
+            query: () => '/api/scooters',
+            providesTags: ['scooters']
+        }),
+        addScooters : builder.mutation({
+            query : (initialScooter) => ({
+                // post: 'http://localhost:8080/api/scooters'
+                url: '/api/scooters',
+                method: "POST",
+                body: initialScooter
+            }),
+            invalidatesTags: ['scooter']
+        }),
+        getTrucks : builder.query({
+            // get: 'http://localhost:8080/api/trucks'
+            query: () => '/api/trucks',
+            providesTags: ['trucks']
+        }),
+        addTrucks : builder.mutation({
+            query : (initialTruck) => ({
+                // post: 'http://localhost:8080/api/trucks'
+                url: '/api/trucks',
+                method: "POST",
+                body: initialTruck
+            }),
+            invalidatesTags: ['truck']
+        }),
     })
 })
 

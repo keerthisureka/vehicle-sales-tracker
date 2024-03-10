@@ -1,13 +1,13 @@
 import React from 'react'
 import {Doughnut} from 'react-chartjs-2';
 import {Chart, ArcElement} from 'chart.js';
-import Labels from './Labels';
-import { chart_Data, getTotal } from '../helper/helper';
+import Labels2 from './Labels2';
+import { chart_Data, getTotal } from '../helper/helper2';
 import {default as api} from '../store/apiSlice';
 
 Chart.register(ArcElement);
 
-const Graph = () => {
+const Graph2 = () => {
     const { data, isFetching, isSuccess, isError } = api.useGetCarsQuery()
     let graphData;
     
@@ -31,11 +31,11 @@ const Graph = () => {
                 </div>
                 <div className="flex flex-col py-10 gap-4">
                     {/* Labels */}
-                    <Labels></Labels>
+                    <Labels2></Labels2>
                 </div>
             </div>
         </div>
     )
 }
 
-export default Graph
+export default Graph2

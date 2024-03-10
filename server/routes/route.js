@@ -5,4 +5,16 @@ routes.route('/api/cars')
     .post(controller.addCars)
     .get(controller.getCars);
 
+routes.route('/api/bikes')
+    .post(controller.addBikes)
+    .get(controller.getBikes);
+
+routes.route('/api/scooters')
+    .post(controller.addScooters)
+    .get(controller.getScooters);
+
+routes.route('/api/trucks')
+    .post(controller.addTrucks)
+    .get(controller.getTrucks);
+
 module.exports = routes;

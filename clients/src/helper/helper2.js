@@ -1,13 +1,13 @@
 import _ from 'lodash';
 import { interpolateRgb } from 'd3-interpolate';
 
-export function getSum(data, brand){
+export function getSum(data, mod){
     let sum = _(data)
-                      .groupBy('brand')
+                      .groupBy('mod')
                       .map((objs, key) => {
-                        if(!brand) return _.sumBy(objs, 'units');
+                        if(!mod) return _.sumBy(objs, 'units');
                         return {
-                            'brand': key,
+                            'mod': key,
                             'sum' : _.sumBy(objs, 'units')
                         }
                       })
@@ -15,8 +15,8 @@ export function getSum(data, brand){
     return sum;
 }
 
-export function getLabels(data, brand){
-    let amountSum = getSum(data, brand);
+export function getLabels(data, mod){
+    let amountSum = getSum(data, mod);
     let Total = _.sum(getSum(data));
 
     let  percent = _(amountSum)

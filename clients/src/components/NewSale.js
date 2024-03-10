@@ -5,11 +5,28 @@ import { default as api } from '../store/apiSlice';
 const NewSale = () => {
     const {register, handleSubmit, reset} = useForm();
     const [addCars] = api.useAddCarsMutation()
+    const [addBikes] = api.useAddBikesMutation()
+    const [addScooters] = api.useAddScootersMutation()
+    const [addTrucks] = api.useAddTrucksMutation()
 
     const onSubmit = async (data) => {
         if(!data) return {};
-        await addCars(data).unwrap();
-        reset(); 
+        if(data.type === "Car") {
+            await addCars(data).unwrap();
+        }
+        else if(data.type === "Bike") {
+            await addBikes(data).unwrap();
+        }
+        else if(data.type === "Scooter") {
+            await addScooters(data).unwrap();
+        }
+        else if(data.type === "Truck") {
+            await addTrucks(data).unwrap();
+        }
+        else {
+            alert("Please select vehicle type from the dropdown!");
+        }
+        reset();
     }
   return (
     <div className='form max-w-sm mx-auto w-96'>
