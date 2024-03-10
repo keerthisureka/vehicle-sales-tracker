@@ -25,9 +25,9 @@ const Graph2 = () => {
             <div className="item">
                 <div className="chart relative">
                     {graphData}
-                    <h3 className="mb-4 font-bold title">Total Sales
+                    <h3 className="mb-4 font-bold title"><center>Total Sales
                         <span className="block text-3xl text-emerald-400">{getTotal(data)} units</span>
-                    </h3>
+                    </center></h3>
                 </div>
                 <div className="flex flex-col py-10 gap-4">
                     {/* Labels */}

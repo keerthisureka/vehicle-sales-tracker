@@ -6,6 +6,8 @@ import GraphBike from './components/GraphBike';
 import GraphBike2 from './components/GraphBike2';
 import GraphScooter from './components/GraphScooter';
 import GraphScooter2 from './components/GraphScooter2';
+import GraphTruck from './components/GraphTruck';
+import GraphTruck2 from './components/GraphTruck2';
 // import Form from './components/Form';
 import NewSale from './components/NewSale';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -40,6 +42,14 @@ function App() {
                 <GraphScooter />
                 {/* Form */}
                 <GraphScooter2 />
+              </div>
+            } />
+            <Route path="/truck" element={
+              <div className="grid md:grid-cols-2 gap-4">
+                {/* Chart */}
+                <GraphTruck />
+                {/* Form */}
+                <GraphTruck2 />
               </div>
             } />
             {/* Route for the page with NewSale component */}

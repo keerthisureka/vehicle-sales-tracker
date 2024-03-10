@@ -1,14 +1,14 @@
 import React from 'react'
 import {Doughnut} from 'react-chartjs-2';
 import {Chart, ArcElement} from 'chart.js';
-import LabelsScooter2 from './LabelsScooter2';
-import { chart_Data, getTotal } from '../helper/helperScooter2';
+import LabelsTruck from './LabelsTruck';
+import { chart_Data, getTotal } from '../helper/helperTruck';
 import {default as api} from '../store/apiSlice';
 
 Chart.register(ArcElement);
 
-const GraphScooter2 = () => {
-    const { data, isFetching, isSuccess, isError } = api.useGetScootersQuery()
+const GraphTruck = () => {
+    const { data, isFetching, isSuccess, isError } = api.useGetTrucksQuery()
     let graphData;
     
     if(isFetching) {
@@ -31,11 +31,11 @@ const GraphScooter2 = () => {
                 </div>
                 <div className="flex flex-col py-10 gap-4">
                     {/* Labels */}
-                    <LabelsScooter2></LabelsScooter2>
+                    <LabelsTruck></LabelsTruck>
                 </div>
             </div>
         </div>
     )
 }
 
-export default GraphScooter2
+export default GraphTruck

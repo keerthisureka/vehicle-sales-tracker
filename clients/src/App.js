@@ -11,6 +11,8 @@ import GraphBike from './components/GraphBike';
 import GraphBike2 from './components/GraphBike2';
 import GraphScooter from './components/GraphScooter';
 import GraphScooter2 from './components/GraphScooter2';
+import GraphTruck from './components/GraphTruck';
+import GraphTruck2 from './components/GraphTruck2';
 import NewSale from './components/NewSale';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -33,7 +35,7 @@ function App() {
       <div className={`app ${sidebarOpen ? 'blur' : ''}`}>
         <header className="header">
           <div className="header__content">
-            <h1>Dashboard</h1>
+            <h1>Track Sales</h1>
             <div className="user-details">
               <span className="username">User Name</span>
               <button className="sign-out">Sign Out</button>
@@ -46,6 +48,7 @@ function App() {
               <li onClick={() => scrollToSection('cars')}>Cars</li>
               <li onClick={() => scrollToSection('bikes')}>Bikes</li>
               <li onClick={() => scrollToSection('scooters')}>Scooters</li>
+              <li onClick={() => scrollToSection('trucks')}>Trucks</li>
               <li onClick={() => scrollToSection('add-sale')}>Add New Sale</li>
               <li onClick={() => scrollToSection('help')}>Help</li>
             </ul>
@@ -106,7 +109,12 @@ function App() {
         </section>
         <section id="trucks" className="section"><br /><br /><hr class="bold" />
           <h1 className="mb-10 mt-10 font-bold text-xl"><center>Truck Sales</center></h1>
-          <p>This is the content for the Scooters section.</p>
+          <p><div className="grid md:grid-cols-2 gap-4">
+                {/* Chart */}
+                <GraphTruck />
+                {/* Form */}
+                <GraphTruck2 />
+              </div></p>
         </section>
         <section id="add-sale" className="section"><br /><br /><hr class="bold" />
           <p><NewSale /></p>
@@ -114,16 +122,15 @@ function App() {
         <section id="help" className="section"><br /><br /><hr class="bold" />
           <h1 className="mb-10 mt-10 font-bold text-xl"><center>Help</center></h1>
           <p>This is the content for the Help section.</p>
-        </section>
+        </section><br /><br />
         <footer className="footer">
-          <p>Random Details Lorem Ipsum Dolor Sit Amet</p>
-          <p>Another Random Detail Consectetur Adipiscing Elit</p>
+          <p>Vehicle sales Tracker</p>
           <div className="social-icons">
             <a href="#"><i className="fab fa-facebook-f"></i></a>
             <a href="#"><i className="fab fa-twitter"></i></a>
             <a href="#"><i className="fab fa-instagram"></i></a>
           </div>
-          <p className="copyright">© 2024 Random Company. All Rights Reserved.</p>
+          <p className="copyright">© 2024 ABC Company. All Rights Reserved.</p>
         </footer>
       </div>
     );
