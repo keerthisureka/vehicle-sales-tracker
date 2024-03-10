@@ -30,7 +30,7 @@ const NewSale = () => {
     }
   return (
     <div className='form max-w-sm mx-auto w-96'>
-        <h1 className='font-bold pb-4 text-xl'>ADD NEW SALE DATA</h1>
+        <h1 className='font-bold mb-5 mt-10 text-xl'><center>ADD NEW SALE DATA</center></h1>
         <form id='form' onSubmit={handleSubmit(onSubmit)}>
             <div className='grid gap-4'>
                 <select className='form-input' {...register('type')}>
