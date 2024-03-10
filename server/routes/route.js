@@ -17,4 +17,8 @@ routes.route('/api/trucks')
     .post(controller.addTrucks)
     .get(controller.getTrucks);
 
+routes.route('/api/accounts')
+    .post(controller.addAccount)
+    .get(controller.getAccount);
+
 module.exports = routes;

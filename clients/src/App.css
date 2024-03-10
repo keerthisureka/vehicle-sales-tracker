@@ -98,6 +98,7 @@
 
 .sidebar.open {
   transform: translateX(0);
+  filter: none; /* Remove blur effect when sidebar is open */
 }
 
 .sidebar nav {
@@ -160,6 +161,7 @@
   align-items: center;
   margin-top: 60px;
 }
+
 
 .content {
   width: 80%;
@@ -245,8 +247,9 @@
 }
 
 .blur .main-content {
-  filter: blur(5px);
+  filter: blur(5px); /* Apply blur effect to main content only */
 }
+
 
 @keyframes imageMotion {
   0% {

@@ -14,6 +14,8 @@ import GraphScooter2 from './components/GraphScooter2';
 import GraphTruck from './components/GraphTruck';
 import GraphTruck2 from './components/GraphTruck2';
 import NewSale from './components/NewSale';
+import Login from './components/Login';
+import Register from './components/Register';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -32,7 +34,18 @@ function App() {
     };
   
     return (
-      <div className={`app ${sidebarOpen ? 'blur' : ''}`}>
+      <div>
+        <Router>
+          <Routes>
+            {/* Route for the page with grid columns */}
+            <Route path="/" element={
+              <Login />
+            } />
+            {/* Route for the page with grid columns */}
+            <Route path="/register" element={
+              <Register />
+            } />
+          <Route path="/home" element={<div className={`app ${sidebarOpen ? '' : ''}`}>
         <header className="header">
           <div className="header__content">
             <h1>Track Sales</h1>
@@ -132,6 +145,9 @@ function App() {
           </div>
           <p className="copyright">© 2024 ABC Company. All Rights Reserved.</p>
         </footer>
+      </div>} />
+      </Routes>
+      </Router>
       </div>
     );
   }

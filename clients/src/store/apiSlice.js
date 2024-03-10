@@ -63,6 +63,22 @@ export const apiSlice = createApi({
             }),
             invalidatesTags: ['truck']
         }),
+        // get accounts
+        getAccounts : builder.query({
+            // get: 'http://localhost:8080/api/accounts'
+            query: () => '/api/accounts',
+            providesTags: ['accounts']
+        }),
+        // add new account
+        addAccounts : builder.mutation({
+            query : (initialAccount) => ({
+                // post: 'http://localhost:8080/api/accounts'
+                url: '/api/accounts',
+                method: "POST",
+                body: initialAccount
+            }),
+            invalidatesTags: ['accounts']
+        }),
     })
 })
 

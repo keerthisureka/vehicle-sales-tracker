@@ -38,14 +38,21 @@ const trucksModel = new Schema({
     year: {type: String, default: "NA"}
 })
 
+const accountModel = new Schema({
+    username: {type: String, default: "admin"},
+    password: {type: String, default: "admin123"},
+})
+
 const Cars = mongoose.model("cars", carsModel)
 const Bikes = mongoose.model("bikes", bikesModel)
 const Scooters = mongoose.model("scooters", scootersModel)
 const Trucks = mongoose.model("trucks", trucksModel)
+const Accounts = mongoose.model("account", accountModel)
 
 module.exports = {
     Cars,
     Bikes,
     Scooters,
-    Trucks
+    Trucks,
+    Accounts
 }
